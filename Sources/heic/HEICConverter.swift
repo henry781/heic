@@ -18,6 +18,10 @@ struct HEICConverter {
         if destinationUrl.pathExtension.lowercased() != HEICConverter.heicExtension {
             throw HEICErrors.invalidDestinationExtension
         }
+        if FileManager.default.fileExists(atPath: destinationUrl.path) {
+            print("\(destinationUrl.relativePath.blue) already exist, skipping")
+            return
+        }
         let q = quality ?? HEICConverter.defaultQuality
         if q < 1 || q > 100 {
             throw HEICErrors.invalidQuality
