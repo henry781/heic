@@ -1,5 +1,7 @@
 # heic
 
+A utility to convert images to heic.
+
 ## Usage
 
 ```

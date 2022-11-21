@@ -6,7 +6,7 @@ struct HEICCLI: ParsableCommand {
 
     static var configuration = CommandConfiguration(
             commandName: "heic",
-            abstract: "An utility to convert images to heic.",
+            abstract: "A utility to convert images to heic.",
             version: "1.0.0")
 
     @Option(name: .shortAndLong, help: "Quality between 1 and 100 (lossless)")
